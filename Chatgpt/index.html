@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@openai/api@1.0.0-beta.2"></script>
+
+    <script>
+        const openai = require('@openai/api')('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');
+        function sendMessage(message) {
+                openai.complete({
+                    engine: 'davinci',
+                    prompt: message,
+                    maxTokens: 60,
+                    n: 1,
+                    temperature: 0.5,
+                })
+                .then((response) => {
+                    console.log(response);
+                    // Do something with the response, such as displaying it to the user
+                })
+                .catch((err) => {
+                    console.error(err);
+                });
+                }
+
+      </script>
+      
+</head>
+<body>
+<form onsubmit="sendMessage(event)">
+    <input type="text" name="message" />
+    <button type="submit">Send</button>
+  </form>
+</body>

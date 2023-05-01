@@ -1,0 +1,11 @@
+{
+    "name": "Random user",
+    "version": "1.0.0",
+    "description": "Random user",
+    "manifest_version": 3,
+    "author": "Anirudh soni",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Random user"
+    }
+}
